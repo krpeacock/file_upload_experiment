@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "file_upload": {
+      "main": "src/file_upload/main.mo",
+      "type": "motoko"
+    },
+    "file_upload_assets": {
+      "dependencies": [
+        "file_upload"
+      ],
+      "frontend": {
+        "entrypoint": "src/file_upload_assets/src/index.html"
+      },
+      "source": [
+        "src/file_upload_assets/assets",
+        "dist/file_upload_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.7.6",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
