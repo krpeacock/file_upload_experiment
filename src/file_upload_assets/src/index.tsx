@@ -46,21 +46,20 @@ const App = () => {
           setFetchedIndex(result);
         });
 
-        const foobar = [...new TextEncoder().encode("foobar")];
-      assetActor.
+      const foobar = [...new TextEncoder().encode("foobar")];
 
       const update = await assetActor.store({
         key: "/foobar.txt",
         content: foobar,
         sha256: [],
         content_type: "text/plain",
-        "content_encoding": "identity",
+        content_encoding: "identity",
       });
 
       const get = await assetActor.get({
         key: "/foobar.txt",
         accept_encodings: ["identity"],
-      })
+      });
       debugger;
     })();
   }, [setAuthClient, setIsAuthenticated, isAuthenticated]);
